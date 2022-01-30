@@ -1,1 +1,3 @@
-# Tic Tac Toe Ai With Minimax Algorithm
+# Tic Tac Toe AI
+## Tic Tac Toe game online, Player vs Player or Player vs AI
+## Technologies: React.js - Socket.io - Nodejs and Minimax AI Algorithm
