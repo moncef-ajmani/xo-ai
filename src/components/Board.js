@@ -1,19 +1,17 @@
 import React from 'react'
 
-export default function Board({board,move}) {
-    const handleClick = () =>{
-        move()
-    }
+export default function Board({board,move,won}) {
     return (
         <table className="board">
-            {board.map((row,id)=>{
-                return(
-                    <tr key={id}>
-                        {row.map((col,id)=><td key={id} onClick={handleClick}>{col}</td>)}
-                    </tr>
-                )
-                
-            })}
+            <tbody>
+                {board.map((row,x)=>{
+                    return(
+                        <tr key={x}>
+                            {row.map((col,y)=><td key={y} onClick={()=>move(x,y)}><div className={col}></div></td>)}
+                        </tr>
+                    )
+                })}
+            </tbody>
         </table>
     )
 }
